@@ -4,67 +4,112 @@
 
 # Reviewing JavaScript Inheritance
 
-?: What is the native object orientation model of JavaScript?
-
-(X) Prototypal
-() Class-Based
-() ES2016 standard
-() Prototypical
-
-?: The primary difference between an object created by a factory function and a constructor function is:
-
-() Factory functions cannot create objects with methods
-(X) Constructor functions’ creations identify their constructor as the constructor name
-() Constructor functions cannot create instances of type Object
-() Factory functions are more memory efficient
-
-?: With a constructor function called `Dog()`, we can assume that the `typeof` its `prototype` attribute is:
-
-() `Class`
-(X) `object`
-() Undefined
-() Constructor
-
-?: Given the following constructor function: 
-
-```javascript
-function Dog(name){ this.name = name}
+``` javascript
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+  eats() {
+    return `${this.name} is eating!`
+  }
+}
+class Mammal {
+  constructor(name) {
+    this.name = name;
+  }
+  sleeps() {
+    return `${this.name} is sleeping!`
+  }
+}
+class Rabbit extends Mammal {
+  //...
+} 
+let animal = new Animal("Ringo");
+let mammal = new Mammal("Wilbur");
+let rabbit = new Rabbit("Jabby");
 ```
 
-Which we can assume to be assigned to `let b = new Dog(“Byron”)`.
+?: Which function will not output “[Name] is eating!”
 
-Which code sample below would add a method called `bark()` to the prototype that returns “Byron says bark”?
+() None of the above
+(X) `mammal.eats()`
+() `animal.eats()`
+() `rabbit.eats()`
 
-()
-```javascript
-function Dog(name){ this.name = name; this.bark = () => console.log(`${this.name} says bark`) }
-````
-() 
-```javascript
-function Dog(name){ this.name = name; this.bark = function() { console.log(`${this.name} says bark`) } }
-```
-() 
-```javascript
-b.prototype = () => console.log(`${this.name} says bark`)
-````
-(X) 
-```javascript
-Dog.prototype.bark =  () => console.log(`${this.name} says bark`)
-```
+?: The accepted functionality of extend is to build new functionality into the inherited method:
 
-?: Given the following code, how many definitions of `razzle()` exist?
+() True
+(X) False
 
 ```javascript
-function Wizard(name) { this.name = name }
-["radegast", "gandalf", "harry potter", "merlin"].map( n => new Wizard(n.charAt(0).toUpperCase() + n.slice(1) ))
-Wizard.prototype.razzle = function() {
-console.log(`${this.name} razzles you!`)
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+  eats() {
+    return `${this.name} is eating!`
+  }
+}
+class Rabbit extends Mammal {
+  constructor(name, color) {
+    //..
+  }
 }
 ```
 
-() 4
-(X) 1
-() 0
-() 5
+?: What is the correct way to have the constructor for `rabbit` inherit the `name` property?
+
+() `this.name = name;`
+(X) `super(name);`
+() `this.name = super(name);`
+() `super(name) = name;`
+
+?: What keyword does JavaScript provide for directly working with a parent class constructor and inherited methods?
+
+(X) `super`
+() `extends`
+() `class`
+() `constructor`
+
+?: What is the correct way to have the constructor for `rabbit` inherit the `name` property?
+
+() this.name = name;
+() this.name = super(name);
+(X) super(name);
+() super(name) = name;
+
+```javascript
+class Vehicle {
+  constructor( make ) {
+    this._make = make
+  }
+
+  get make() {
+    return this._make
+  }
+
+ static definition() {
+    return 'A vehicle is used for transporting people or goods, especially on land.'
+  }
+}
+
+class Car extends Vehicle {
+  constructor( make , driveTrain ) {
+    super( make )
+    this._driveTrain = driveTrain
+  }
+
+  static definition() {
+    return `${super.definition()} A car is a road vehicle, typically with four wheels, powered by an internal combustion engine and able to carry a small number of people.`
+  }
+}
+```
+
+?: What is the correct way to have the `car` utilize the inherited static method of `definition`?
+
+() `${definition()} a road vehicle, typically with four wheels, powered by an internal combustion engine and able to carry a small number of people.`
+() `${this.definition()} a road vehicle, typically with four wheels, powered by an internal combustion engine and able to carry a small number of people.`
+() ${super.definition()} + `a road vehicle, typically with four wheels, powered by an internal combustion engine and able to carry a small number of people.`
+(X) `${super.definition()} a road vehicle, typically with four wheels, powered by an internal combustion engine and able to carry a small number of people.`
 
 ???
