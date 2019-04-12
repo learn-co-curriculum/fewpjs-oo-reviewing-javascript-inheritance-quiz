@@ -4,6 +4,7 @@
 
 # Reviewing JavaScript Inheritance
 
+?: 
 ``` javascript
 class Animal {
   constructor(name) {
@@ -29,17 +30,15 @@ let mammal = new Mammal("Wilbur");
 let rabbit = new Rabbit("Jabby");
 ```
 
-?: Which function will not output “[Name] is eating!”
+Which function will not output “[Name] is eating!”
 
-() None of the above
-(X) `mammal.eats()`
-() `animal.eats()`
-() `rabbit.eats()`
+( ) None of the above (X) `mammal.eats()` ( ) `animal.eats()` ( ) `rabbit.eats()`
 
 ?: The accepted functionality of extend is to build new functionality into the inherited method:
 
-() True
-(X) False
+( ) True (X) False
+
+?: 
 
 ```javascript
 class Animal {
@@ -57,26 +56,19 @@ class Rabbit extends Mammal {
 }
 ```
 
-?: What is the correct way to have the constructor for `rabbit` inherit the `name` property?
+What is the correct way to have the constructor for `rabbit` inherit the `name` property?
 
-() `this.name = name;`
-(X) `super(name);`
-() `this.name = super(name);`
-() `super(name) = name;`
+( ) `this.name = name;` (X) `super(name);` ( ) `this.name = super(name);` ( ) `super(name) = name;`
 
 ?: What keyword does JavaScript provide for directly working with a parent class constructor and inherited methods?
 
-(X) `super`
-() `extends`
-() `class`
-() `constructor`
+(X) `super` ( ) `extends` ( ) `class` ( ) `constructor`
 
 ?: What is the correct way to have the constructor for `rabbit` inherit the `name` property?
 
-() this.name = name;
-() this.name = super(name);
-(X) super(name);
-() super(name) = name;
+( ) this.name = name; ( ) this.name = super(name); (X) super(name); ( ) super(name) = name;
+
+?: 
 
 ```javascript
 class Vehicle {
@@ -105,11 +97,8 @@ class Car extends Vehicle {
 }
 ```
 
-?: What is the correct way to have the `car` utilize the inherited static method of `definition`?
+What is the correct way to have the `car` utilize the inherited static method of `definition`?
 
-() `${definition()} a road vehicle, typically with four wheels, powered by an internal combustion engine and able to carry a small number of people.`
-() `${this.definition()} a road vehicle, typically with four wheels, powered by an internal combustion engine and able to carry a small number of people.`
-() ${super.definition()} + `a road vehicle, typically with four wheels, powered by an internal combustion engine and able to carry a small number of people.`
-(X) `${super.definition()} a road vehicle, typically with four wheels, powered by an internal combustion engine and able to carry a small number of people.`
+( ) `${definition()} a road vehicle, typically with four wheels, powered by an internal combustion engine and able to carry a small number of people.` ( ) `${this.definition()} a road vehicle, typically with four wheels, powered by an internal combustion engine and able to carry a small number of people.` ( ) ${super.definition()} + `a road vehicle, typically with four wheels, powered by an internal combustion engine and able to carry a small number of people.` (X) `${super.definition()} a road vehicle, typically with four wheels, powered by an internal combustion engine and able to carry a small number of people.`
 
 ???
