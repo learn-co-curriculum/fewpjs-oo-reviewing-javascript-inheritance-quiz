@@ -5,6 +5,7 @@
 # Reviewing JavaScript Inheritance
 
 ?: 
+
 ``` javascript
 class Animal {
   constructor(name) {
