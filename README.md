@@ -33,7 +33,7 @@ let rabbit = new Rabbit("Jabby");
 
 Which function will not output “[Name] is sleeping!”
 
-( ) None of the above () `mammal.sleeps()` (X) `animal.sleeps()` ( ) `rabbit.sleeps()`
+( ) None of the above ( ) `mammal.sleeps()` (X) `animal.sleeps()` ( ) `rabbit.sleeps()`
 
 ?: The accepted functionality of extend is to build new functionality into the inherited method:
 
