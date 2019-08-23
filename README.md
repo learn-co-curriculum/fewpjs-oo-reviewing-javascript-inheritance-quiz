@@ -31,9 +31,9 @@ let mammal = new Mammal("Wilbur");
 let rabbit = new Rabbit("Jabby");
 ```
 
-Which function will not output “[Name] is eating!”
+Which function will not output “[Name] is sleeping!”
 
-( ) None of the above (X) `mammal.eats()` ( ) `animal.eats()` ( ) `rabbit.eats()`
+( ) None of the above () `mammal.sleeps()` (X) `animal.sleeps()` ( ) `rabbit.sleeps()`
 
 ?: The accepted functionality of extend is to build new functionality into the inherited method:
 
@@ -64,10 +64,6 @@ What is the correct way to have the constructor for `rabbit` inherit the `name` 
 ?: What keyword does JavaScript provide for directly working with a parent class constructor and inherited methods?
 
 (X) `super` ( ) `extends` ( ) `class` ( ) `constructor`
-
-?: What is the correct way to have the constructor for `rabbit` inherit the `name` property?
-
-( ) this.name = name; ( ) this.name = super(name); (X) super(name); ( ) super(name) = name;
 
 ?: 
 
