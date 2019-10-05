@@ -50,7 +50,7 @@ class Animal {
     return `${this.name} is eating!`
   }
 }
-class Rabbit extends Mammal {
+class Rabbit extends Animal {
   constructor(name, color) {
     //..
   }
