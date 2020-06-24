@@ -35,7 +35,7 @@ Which function will not output “[Name] is sleeping!”
 
 ( ) None of the above ( ) `mammal.sleeps()` (X) `animal.sleeps()` ( ) `rabbit.sleeps()`
 
-?: The accepted functionality of extend is to build new functionality into the inherited method:
+?: You do NOT need to use the `super` keyword when declaring the constructor in a child class:
 
 ( ) True (X) False
 
@@ -94,8 +94,8 @@ class Car extends Vehicle {
 }
 ```
 
-What is the correct way to have the `car` utilize the inherited static method of `definition`?
+What is the correct way to have the `Car` utilize the inherited static method of `definition`?
 
-( ) `${definition()} a road vehicle, typically with four wheels, powered by an internal combustion engine and able to carry a small number of people.` ( ) `${this.definition()} a road vehicle, typically with four wheels, powered by an internal combustion engine and able to carry a small number of people.` ( ) ${super.definition()} + `a road vehicle, typically with four wheels, powered by an internal combustion engine and able to carry a small number of people.` (X) `${super.definition()} a road vehicle, typically with four wheels, powered by an internal combustion engine and able to carry a small number of people.`
+( ) `definition()` ( ) `this.definition()` ( ) `super.definition` (X) `super.definition()`
 
 ???
